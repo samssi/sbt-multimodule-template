@@ -21,7 +21,7 @@ object MasterBuild extends Build {
   lazy val root = Project(
     id = "parent",
     base = file(".")
-  ).aggregate(infrastructure, domain, application)
+  ).aggregate(application)
 
   lazy val application = {
     Project(
