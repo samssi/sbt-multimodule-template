@@ -23,28 +23,6 @@ object MasterBuild extends Build {
     base = file(".")
   ).aggregate(infrastructure, domain, application)
 
-  lazy val infrastructure = {
-    Project(
-      id = "infrastructure",
-      base = file("infrastructure"),
-      settings = generalSettings ++ Seq(
-        libraryDependencies ++= Seq(
-        )
-      )
-    )
-  }
-
-  lazy val domain = {
-    Project(
-      id = "domain",
-      base = file("domain"),
-      settings = generalSettings ++ Seq(
-        libraryDependencies ++= Seq(
-        )
-      )
-    ).aggregate(infrastructure) dependsOn (infrastructure)
-  }
-
   lazy val application = {
     Project(
       id = "application",
@@ -53,7 +31,7 @@ object MasterBuild extends Build {
         libraryDependencies ++= Seq(
         )
       )
-    ).aggregate(infrastructure, domain) dependsOn (infrastructure, domain)
+    )
   }
 
   lazy val generalSettings = {
