@@ -4,3 +4,5 @@ mv Server.scala application/src/test/scala/jetty/Server.scala
 mv web.xml application/src/main/webapp/WEB-INF/web.xml
 rm genfolders.sh
 rm -rf .git/
+rm README.md
+touch README.md
