@@ -48,9 +48,9 @@ object MasterBuild extends Build {
   lazy val serverSettings = {
     webSettings ++ Seq(
       libraryDependencies ++= Seq(
-        "org.eclipse.jetty" % "jetty-server" % "8.1.13.v20130916" % "container",
-        "org.eclipse.jetty" % "jetty-webapp" % "8.1.13.v20130916" % "container",
-        "org.eclipse.jetty" % "jetty-servlets" % "8.1.13.v20130916" % "container",
+        "org.eclipse.jetty" % "jetty-server" % "8.1.15.v20140411" % "container",
+        "org.eclipse.jetty" % "jetty-webapp" % "8.1.15.v20140411" % "container",
+        "org.eclipse.jetty" % "jetty-servlets" % "8.1.15.v20140411" % "container",
         "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "provided" artifacts Artifact("javax.servlet", "jar", "jar")
       )
     ) ++ buildSettings
